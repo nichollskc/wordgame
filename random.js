@@ -26,21 +26,11 @@ function shuffle(o) {
 function randomise(list, rowID) {
     var row = document.getElementById(rowID);
 
-	row.animate({
-		opacity: 0,
-	}, 0, function() {
-	});
-
     var listRandomisedOrder = shuffle(list);
 
     for (var j = 0, col; col = row.cells[j]; j++) {
       col.innerHTML = listRandomisedOrder[j];
-    }  
-
-	row.animate({
-		opacity: 1,
-	}, 500, function() {
-	});
+    }
 
 };
 
