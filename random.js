@@ -18,23 +18,41 @@ $(function(){
     });
 });
 
-function randomise() {
+function shuffle(o) {
+    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
 
-	$('.random').animate({
+function randomise(list, rowID) {
+    var row = document.getElementById(rowID);
+
+	row.animate({
 		opacity: 0,
 	}, 0, function() {
 	});
 
-	document.querySelector('#array1').innerHTML = getRandomArrayItem(lists['mediums'][$('#mediums').val()]['data']);
-	document.querySelector('#array2').innerHTML = getRandomArrayItem(lists['verbs'][$('#verbs').val()]['data']);
-	document.querySelector('#array3').innerHTML = getRandomArrayItem(lists['subjects'][$('#subjects').val()]['data']);
+    var listRandomisedOrder = shuffle(list);
 
-	$('.random').animate({
+    for (var j = 0, col; col = row.cells[j]; j++) {
+      col.innerHTML = listRandomisedOrder[j];
+    }  
+
+	row.animate({
 		opacity: 1,
 	}, 500, function() {
 	});
 
 };
+
+function randomiseWords() {
+    var list = lists['mediums'][$('#mediums').val()]['data'];
+    randomise(list, 'randomWords');
+}
+
+function randomiseNumbers() {
+    var list = [1,2,3,4];
+    randomise(list, 'randomNumbers');
+}
 
 /* Helper functions
 -------------------------------- */

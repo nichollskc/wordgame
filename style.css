@@ -116,13 +116,24 @@ ol, ul {
 	text-align: center;
 }
 
-.container ul {
-	margin-left: 0;
+#wordTable {
+    width: 100%;
+    text-transform: uppercase;
+    table-layout: fixed;
 }
 
-.container li {
+#numberTable {
+    width: 40%;
+    table-layout: fixed;
+    margin-left: 30%;
+}
+
+#codediv {
+    margin-top: 10%;
+}
+
+.container td {
 	font-size: 50px;
-	margin-right: 8px;
 }
 
 ol {
@@ -131,10 +142,6 @@ ol {
 ul {
   list-style-type: none;
   text-indent: 34px; 
-}
-
-ul.random, ul.random li {
-	display: inline;
 }
 
 li.result {

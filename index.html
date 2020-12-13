@@ -2,7 +2,7 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
 	<HEAD>
-		<TITLE>Randomiser</TITLE>
+		<TITLE>Word game</TITLE>
 		<link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="style.css">
 
@@ -31,23 +31,39 @@
       </div>
     </div>
 		<div class="container">   	
-			<ul class="random">
-				<li id="array1" class="result"><span>people</span></li>
-				<li>are</li>
-				<li id="array2" class="result"><span>random</span></li>
-				<li>for</li>
-				<li id="array3" class="result"><span>stuff</span></li>
-			</ul>
+            <table class="random" id="wordTable">
+                <tr id="randomWords">
+                    <td><span>??</span></td>
+                    <td><span>??</span></td>
+                    <td><span>??</span></td>
+                    <td><span>??</span></td>
+                </tr>
+                <tr id="wordLabel">
+                    <td><span>1</span></td>
+                    <td><span>2</span></td>
+                    <td><span>3</span></td>
+                    <td><span>4</span></td>
+                </tr>
+            </table>
+
+            <input type="button" value="New words" class="button" onclick="randomiseWords();" />
+
+            <div id="codediv">
+
+                <h3>Secret code</h3>
+
+                <table class="random" id="numberTable">
+                    <tr id="randomNumbers">
+                        <td class="randomNumber"><span>??</span></td>
+                        <td class="randomNumber"><span>??</span></td>
+                        <td class="randomNumber"><span>??</span></td>
+                    </tr>
+                </table>
+                <input type="button" value="New code" class="button" onclick="randomiseNumbers();" />
+            </div>
 			<div class="break"></div>
-      <!--<button class="button js-hitMe">Hit me!</button>-->
-      <input type="button" value="Hit me!" class="button" onclick="randomise();" />
       <p><a  href="" class="chooseLists js-chooseLists">Choose lists</a></p>
 
 		</div>
-		<footer>
-			<p><a href="http://jonnyburch.com">Jonny</a>'s Randomiser | <a href="https://github.com/jonnyburch/randomiser">GitHub</a></p>
-		</footer>
 	</BODY>
 </HTML>
-
-<!--  onClick="window.location.reload()" -->
