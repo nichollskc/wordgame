@@ -35,7 +35,7 @@ function randomise(list, rowID) {
 };
 
 function randomiseWords() {
-    var list = lists['mediums'][$('#mediums').val()]['data'];
+    var list = lists['codenames'];
     randomise(list, 'randomWords');
 }
 

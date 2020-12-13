@@ -1,11 +1,10 @@
 # Word game
 
+Hosted at https://badgerofmediocrity.netlify.app/
+
 Todo:
-* Generate random list of 4 words
-* Generate random codes
-* Simple web interface - press button for new code
-* Press other button for new words
-* Make random words part of URL to save state easily?
+* Read words from textfile(s)
+* Allow for including/excluding textfiles?
 
 Code based on:
 https://github.com/jonnyburch/randomiser
