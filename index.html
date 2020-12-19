@@ -8,6 +8,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="data.js"></script>
+		<script src="seedrandom.js"></script>
 		<script src="random.js"></script>
 	</HEAD>
 	<BODY>
@@ -46,7 +47,17 @@
                 </tr>
             </table>
 
-            <input type="button" value="New words" class="button" onclick="randomiseWords();" />
+            <div>
+                <input type="button" value="New words" class="button" onclick="randomiseWords();" />
+				<input list="browsers" name="browser" id="teamKey">
+				<datalist id="browsers">
+				  <option value="Edge">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist>
+            </div>
 
             <div id="codediv">
 

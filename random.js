@@ -18,30 +18,35 @@ $(function(){
     });
 });
 
-function shuffle(o) {
+function shuffle(o, seedKey) {
+    Math.seedrandom(seedKey);
+    console.log(seedKey);
+    console.log(Math.random());
     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
 
-function randomise(list, rowID) {
+function randomise(list, rowID, seedKey) {
     var row = document.getElementById(rowID);
 
-    var listRandomisedOrder = shuffle(list);
+    var listRandomisedOrder = shuffle(list, seedKey);
 
     for (var j = 0, col; col = row.cells[j]; j++) {
       col.innerHTML = listRandomisedOrder[j];
     }
-
 };
 
 function randomiseWords() {
-    var list = lists['codenames'];
-    randomise(list, 'randomWords');
+    var list = lists['codenames'].slice();
+    console.log(list);
+    var seedKey = document.getElementById('teamKey').value;
+    randomise(list, 'randomWords', seedKey);
 }
 
 function randomiseNumbers() {
     var list = [1,2,3,4];
-    randomise(list, 'randomNumbers');
+    console.log(list);
+    randomise(list, 'randomNumbers', null);
 }
 
 /* Helper functions
