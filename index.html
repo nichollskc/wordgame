@@ -49,14 +49,15 @@
 
             <div>
                 <input type="button" value="New words" class="button" onclick="randomiseWords();" />
-				<input list="browsers" name="browser" id="teamKey">
-				<datalist id="browsers">
-				  <option value="Edge">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
+                <input id="toggleWordsButton" type="button" value="Hide words" class="button" onclick="toggleWords();" />
+			</div>
+			<div>
+				<span id='keyLabel' class='faint'>Key: </span>
+				<input list="teamKeyList" name="teamKey" id="selectTeamKey">
+				<datalist id="teamKeyList">
+				  <option value="Tom Riddle">
 				</datalist>
+				<span class='faint'>Check:<b id='keyCheck'></b></span>
             </div>
 
             <div id="codediv">
@@ -71,6 +72,7 @@
                     </tr>
                 </table>
                 <input type="button" value="New code" class="button" onclick="randomiseNumbers();" />
+                <input id='toggleNumbersButton' type="button" value="Hide code" class="button" onclick="toggleNumbers();" />
             </div>
 			<div class="break"></div>
             <!-- <p><a  href="" class="chooseLists js-chooseLists">Choose lists</a></p> -->
