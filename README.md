@@ -3,8 +3,8 @@
 Hosted at https://badgerofmediocrity.netlify.app/
 
 Todo:
-* Read words from textfile(s)
-* Allow for including/excluding textfiles?
+* Add extra word lists - e.g. homographs?
+* Add functionality for including/excluding specific lists
 
 Code based on:
 https://github.com/jonnyburch/randomiser
